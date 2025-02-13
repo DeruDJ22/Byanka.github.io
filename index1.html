@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Happy Birthday Byanka! ✨</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="snowflakes" id="snowflakes"></div>
+    <div class="frozen-title animate__animated animate__fadeInDown">FROZEN</div>
+
+    <!-- Amplop -->
+    <div class="wrapper" id="wrapper">
+        <div class="lid one"></div>
+        <div class="lid two"></div>
+        <div class="envelope"></div>
+    </div>
+
+    <!-- Surat Ulang Tahun -->
+    <div class="container" id="container">
+        <div class="text-content">
+            <div class="h1-container">
+                <img src="img/elsa.webp" class="elsa left" alt="Elsa">
+                <h1>Hai Byanka...</h1>
+                <img src="img/elsa.webp" class="elsa right" alt="Elsa">
+            </div>
+            <h1 class="animate__animated animate__bounceIn">✨ Selamat ulang tahun yang ke-3! ✨</h1>
+            <div class="birthday-cake">🎂</div>
+            <p class="arabic animate__animated animate__fadeInUp">Barakallahu laka wabaaraka 'alaika</p>
+            <p class="animate__animated animate__fadeInUp">Semoga Allah memberikan keberkahan</p>
+            <p class="animate__animated animate__fadeInUp">Semoga menjadi anak yang Sholehah,<br>menjadi qurrota a'yun bagi kedua orang tua</p>
+            <div class="signature animate__animated animate__fadeInUp">
+                ~ Deru Dj ~ Desir Dj ~
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animasi salju
+        function createSnowflakes() {
+            const snowContainer = document.getElementById('snowflakes');
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                snowflake.style.opacity = Math.random();
+                snowContainer.appendChild(snowflake);
+            }
+        }
+        createSnowflakes();
+
+        // Animasi amplop
+        const wrapper = document.getElementById('wrapper');
+        const container = document.getElementById('container');
+
+        wrapper.addEventListener('click', () => {
+            wrapper.classList.add('open');
+            setTimeout(() => {
+                wrapper.style.display = 'none'; // Sembunyikan amplop
+                container.style.display = 'block'; // Tampilkan surat ulang tahun
+            }, 1000); // Tunggu animasi selesai
+        });
+    </script>
+</body>
+</html>
