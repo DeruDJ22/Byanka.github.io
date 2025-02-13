@@ -36,25 +36,6 @@ body {
     }
 }
 
-.frozen-title {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 5em;
-    color: #fff;
-    text-shadow: 0 0 10px #89CFF0, 0 0 20px #89CFF0, 0 0 30px #89CFF0;
-    z-index: 2;
-    font-family: 'Arial', cursive;
-    letter-spacing: 10px;
-    animation: frozenGlow 3s infinite;
-}
-
-@keyframes frozenGlow {
-    0%, 100% { text-shadow: 0 0 20px #89CFF0; }
-    50% { text-shadow: 0 0 40px #89CFF0; }
-}
-
 .container {
     text-align: center;
     background: rgba(255, 255, 255, 0.85);
