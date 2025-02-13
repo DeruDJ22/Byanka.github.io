@@ -177,14 +177,55 @@ h1 {
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
-        padding: 2rem;
+        padding: 1rem;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 2em;
     }
 
     .elsa {
-        width: 25vw;
+        width: 30vw;
     }
 
     .wrapper {
-        width: 250px;
+        width: 200px;
+        height: 150px;
+    }
+
+    .birthday-cake {
+        font-size: 2em;
+    }
+
+    .signature {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .elsa {
+        width: 40vw;
+    }
+
+    .wrapper {
+        width: 150px;
+        height: 100px;
+    }
+
+    .birthday-cake {
+        font-size: 1.5em;
+    }
+
+    .signature {
+        font-size: 0.8em;
     }
 }
